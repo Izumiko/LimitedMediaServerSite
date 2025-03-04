@@ -33,7 +33,7 @@ import { defaultGuard } from './guards/default.guard';
 
 export const routes: Routes = [
     // Login is required
-    { path: '', canActivate: [defaultGuard] },
+    { path: '', children: [], canActivate: [defaultGuard] },
     // Media
     { path: 'a-media', component: MediaBrowserComponent, canActivate: [AuthGuard, MediaViewerGuard] },
     { path: 'a-media/browse/:folder_id', component: MediaBrowserComponent, canActivate: [AuthGuard, MediaViewerGuard] },
